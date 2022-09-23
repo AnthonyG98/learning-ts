@@ -1,15 +1,18 @@
-const person: {
-    name: string;
-    age: number;
-} = {
+// const person: {
+//     name: string;
+//     age: number;
+// }
+const person = {
     name: "Anthony",
-    age: 23
+    age: 23,
+    hobbies: ["Sports", "Music", "Coding"]
 };
-console.log(person.name);
-//You can do the above but it's better to do code below
-const otherPerson = {
-    name: "Anthony",
-    age: 23
-}
-//Let typescript infer the type
 
+let favActivities: string[];
+favActivities = ["Boxing"];
+
+console.log(person.name);
+
+for(const hobby of person.hobbies){
+    console.log(hobby.toUpperCase());
+};
